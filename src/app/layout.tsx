@@ -1,5 +1,7 @@
+import { Footer } from "@/components/footer";
+import { Menu } from "@/components/menu";
 import type { Metadata } from "next";
-import { Montserrat, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -28,7 +30,11 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${jetBrainsMono.variable} antialiased`}
       >
-        {children}
+        <main className="from-navy relative flex min-h-screen flex-col bg-linear-to-br from-15% to-[#131620] to-75%">
+          <Menu />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );
