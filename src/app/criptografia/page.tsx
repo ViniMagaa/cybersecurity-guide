@@ -1,0 +1,156 @@
+import LetterGlitch from "@/blocks/Backgrounds/LetterGlitch/LetterGlitch";
+import TextType from "@/blocks/TextAnimations/TextType/TextType";
+import { TextAnimate } from "@/components/magicui/text-animate";
+
+export default function Criptografia() {
+  return (
+    <>
+      <div className="fixed top-0 z-0 h-screen w-full opacity-30">
+        <LetterGlitch
+          glitchColors={["#556f44", "#659b5e", "#78a1bb"]}
+          glitchSpeed={100}
+          centerVignette={true}
+          outerVignette={true}
+          smooth={true}
+        />
+      </div>
+      <section className="relative flex w-full flex-grow flex-col items-center gap-16 overflow-hidden px-4 pb-8">
+        <TextType
+          text="Criptografia"
+          className="mt-16 font-mono text-xl font-bold sm:text-3xl md:text-5xl lg:text-7xl"
+          typingSpeed={75}
+          showCursor
+          cursorCharacter="_"
+        />
+        <div className="space-y-4">
+          <TextAnimate
+            once
+            duration={0.5}
+            as="h2"
+            className="text-center font-mono text-2xl font-bold md:text-5xl"
+          >
+            Definição
+          </TextAnimate>
+          <TextAnimate
+            once
+            duration={0.5}
+            by="line"
+            className="max-w-[600px] text-center text-gray-400 lg:text-xl"
+          >
+            Criptografia é o processo de transformar informações em códigos para
+            que só pessoas autorizadas possam acessá-las.
+          </TextAnimate>
+        </div>
+        <div className="space-y-4">
+          <TextAnimate
+            once
+            duration={0.5}
+            as="h2"
+            className="text-center font-mono text-2xl font-bold md:text-5xl"
+          >
+            Como funciona?
+          </TextAnimate>
+          <TextAnimate
+            once
+            duration={0.5}
+            by="line"
+            className="max-w-[600px] text-center text-gray-400 lg:text-xl"
+          >
+            Os dados são embaralhados com chaves de criptografia; só quem tem a
+            chave correta consegue decodificar e entender a mensagem.
+          </TextAnimate>
+        </div>
+        <div className="space-y-4">
+          <TextAnimate
+            once
+            duration={0.5}
+            as="h2"
+            className="text-center font-mono text-2xl font-bold md:text-5xl"
+          >
+            Por que é importante?
+          </TextAnimate>
+          <TextAnimate
+            once
+            duration={0.5}
+            by="line"
+            className="max-w-[600px] text-center text-gray-400 lg:text-xl"
+          >
+            Protege suas senhas, mensagens, transações bancárias e outros dados
+            pessoais contra acessos não autorizados.
+          </TextAnimate>
+        </div>
+        <div className="space-y-4">
+          <TextAnimate
+            once
+            duration={0.5}
+            as="h2"
+            className="text-center font-mono text-2xl font-bold md:text-5xl"
+          >
+            Dicas práticas de uso
+          </TextAnimate>
+          <ul className="ml-4 max-w-[600px] list-disc text-gray-400 lg:text-xl">
+            <TextAnimate once duration={0.5} by="line" as="li">
+              Use sites com HTTPS (cadeado na barra do navegador).
+            </TextAnimate>
+            <TextAnimate once duration={0.5} by="line" as="li">
+              Prefira aplicativos que utilizam criptografia de ponta a ponta
+              (como WhatsApp).
+            </TextAnimate>
+            <TextAnimate once duration={0.5} by="line" as="li">
+              Evite compartilhar senhas e dados sensíveis sem criptografia.
+            </TextAnimate>
+          </ul>
+        </div>
+        <div className="space-y-4">
+          <TextAnimate
+            once
+            duration={0.5}
+            as="h2"
+            className="text-center font-mono text-2xl font-bold md:text-5xl"
+          >
+            Curiosidades
+          </TextAnimate>
+          <p className="max-w-[600px]">
+            <TextAnimate
+              once
+              duration={0.5}
+              as="strong"
+              className="font-mono text-lg font-semibold lg:text-2xl"
+            >
+              Mito:
+            </TextAnimate>
+            <TextAnimate
+              once
+              duration={0.5}
+              as="span"
+              by="line"
+              className="ml-2 text-gray-400 lg:text-xl"
+            >
+              Criptografia é algo que só especialistas entendem.
+            </TextAnimate>
+          </p>
+          <p className="max-w-[600px]">
+            <TextAnimate
+              once
+              duration={0.5}
+              as="strong"
+              className="font-mono text-lg font-semibold lg:text-2xl"
+            >
+              Verdade:
+            </TextAnimate>
+            <TextAnimate
+              once
+              duration={0.5}
+              by="line"
+              as="span"
+              className="text-gray-400 lg:text-xl"
+            >
+              Está presente em muitas coisas do dia a dia, como senhas, e é
+              fundamental para segurança digital.
+            </TextAnimate>
+          </p>
+        </div>
+      </section>
+    </>
+  );
+}
