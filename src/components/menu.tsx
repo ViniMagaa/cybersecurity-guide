@@ -18,7 +18,7 @@ export function Menu() {
 
   return (
     <TooltipProvider>
-      <Dock className="z-10 mt-12 gap-4 rounded-full px-2">
+      <Dock className="z-20 mt-12 gap-4 rounded-full px-2">
         {routes.map((item) => (
           <DockIcon key={item.label}>
             <Tooltip>

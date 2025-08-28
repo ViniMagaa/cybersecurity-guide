@@ -8,6 +8,7 @@ import {
   MountainSnow,
   ShieldAlert,
   Waypoints,
+  Wifi,
 } from "lucide-react";
 
 export const routes = [
@@ -19,5 +20,6 @@ export const routes = [
   { href: "/darkweb", icon: MountainSnow, label: "Dark Web" },
   { href: "/ssltsl", icon: Waypoints, label: "SSL/TSL" },
   { href: "/phishing", icon: Anchor, label: "Phishing" },
+  { href: "/iot", icon: Wifi, label: "IoT" },
   { href: "/ciberseguranca", icon: LockKeyhole, label: "Cibersegurança" },
 ];
