@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 
 export function Footer() {
   return (
-    <footer className="m-auto flex w-[calc(100%-10vw)] items-center justify-between border-t px-2 py-4 opacity-50">
+    <footer className="m-auto flex w-full items-center justify-between border-t border-t-gray-400 px-8 py-4 text-gray-400 backdrop-blur-md">
       <div className="flex items-center gap-2 font-mono text-sm">
         <Copyright size={14} /> 2025
       </div>
