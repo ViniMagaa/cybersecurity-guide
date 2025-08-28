@@ -1,8 +1,15 @@
+"use client";
+
 import Cubes from "@/blocks/Animations/Cubes/Cubes";
 import TextType from "@/blocks/TextAnimations/TextType/TextType";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { Button } from "@/components/ui/button";
+import { routes } from "@/utils/routes";
+import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Firewalls() {
+  const router = useRouter();
   return (
     <section className="flex w-full flex-grow flex-col overflow-hidden">
       <div className="fixed top-0 right-2/3 h-screen w-[100vh]">
@@ -156,6 +163,13 @@ export default function Firewalls() {
             </TextAnimate>
           </p>
         </div>
+
+        <Button
+          onClick={() => router.push(routes[2].href)}
+          className="w-fit rounded-full bg-white font-mono text-sm text-black hover:gap-4 hover:bg-white"
+        >
+          Próximo assunto <ArrowRight className="size-4" />
+        </Button>
       </div>
     </section>
   );

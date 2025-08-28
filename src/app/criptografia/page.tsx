@@ -1,8 +1,16 @@
+"use client";
+
 import LetterGlitch from "@/blocks/Backgrounds/LetterGlitch/LetterGlitch";
 import TextType from "@/blocks/TextAnimations/TextType/TextType";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { Button } from "@/components/ui/button";
+import { routes } from "@/utils/routes";
+import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Criptografia() {
+  const router = useRouter();
+
   return (
     <>
       <div className="fixed top-0 z-0 h-screen w-full opacity-30">
@@ -150,6 +158,13 @@ export default function Criptografia() {
             </TextAnimate>
           </p>
         </div>
+
+        <Button
+          onClick={() => router.push(routes[4].href)}
+          className="w-fit rounded-full bg-white font-mono text-sm text-black hover:gap-4 hover:bg-white"
+        >
+          Próximo assunto <ArrowRight className="size-4" />
+        </Button>
       </section>
     </>
   );

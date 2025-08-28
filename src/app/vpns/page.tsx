@@ -1,8 +1,16 @@
+"use client";
+
 import TextType from "@/blocks/TextAnimations/TextType/TextType";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { Button } from "@/components/ui/button";
+import { routes } from "@/utils/routes";
+import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Vpns() {
+  const router = useRouter();
+
   return (
     <>
       <FlickeringGrid
@@ -148,6 +156,12 @@ export default function Vpns() {
             </TextAnimate>
           </p>
         </div>
+        <Button
+          onClick={() => router.push(routes[3].href)}
+          className="w-fit rounded-full bg-white font-mono text-sm text-black hover:gap-4 hover:bg-white"
+        >
+          Próximo assunto <ArrowRight className="size-4" />
+        </Button>
       </section>
     </>
   );
