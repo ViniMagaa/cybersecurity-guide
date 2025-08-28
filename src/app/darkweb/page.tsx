@@ -21,8 +21,8 @@ export default function Darkweb() {
       </WarpBackground>
       <section className="relative flex w-full flex-grow flex-col items-center gap-16 overflow-hidden px-4 pb-8">
         <TextType
-          text="Darkweb"
-          className="mt-16 font-mono text-xl font-bold sm:text-3xl md:text-5xl lg:text-7xl"
+          text="Dark Web"
+          className="mt-16 font-mono text-3xl font-bold sm:text-4xl md:text-6xl lg:text-7xl"
           typingSpeed={75}
           showCursor
           cursorCharacter="_"
@@ -40,7 +40,7 @@ export default function Darkweb() {
             once
             duration={0.5}
             by="line"
-            className="max-w-[600px] text-center text-gray-400 lg:text-xl"
+            className="max-w-[650px] text-center text-gray-400 lg:text-xl"
           >
             A Dark Web é uma parte da internet que não pode ser acessada por
             navegadores comuns, exigindo softwares específicos como o Tor.

@@ -24,7 +24,7 @@ export default function SslTsl() {
       <section className="relative flex w-full flex-grow flex-col items-center gap-16 overflow-hidden px-4 pb-8">
         <TextType
           text="SSL/TSL"
-          className="mt-16 font-mono text-xl font-bold sm:text-3xl md:text-5xl lg:text-7xl"
+          className="mt-16 font-mono text-3xl font-bold sm:text-4xl md:text-6xl lg:text-7xl"
           typingSpeed={75}
           showCursor
           cursorCharacter="_"

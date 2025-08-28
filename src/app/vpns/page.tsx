@@ -46,7 +46,7 @@ export default function Vpns() {
       <section className="m-auto flex w-full max-w-5xl flex-grow flex-col gap-16 overflow-hidden px-4 pb-8">
         <TextType
           text="VPNs"
-          className="mt-16 font-mono text-xl font-bold sm:text-3xl md:text-5xl lg:text-7xl"
+          className="mt-16 font-mono text-3xl font-bold sm:text-4xl md:text-6xl lg:text-7xl"
           typingSpeed={75}
           showCursor
           cursorCharacter="_"
@@ -56,7 +56,7 @@ export default function Vpns() {
             once
             duration={0.5}
             as="h2"
-            className="font-mono text-2xl font-bold md:text-5xl"
+            className="font-mono text-2xl font-bold md:max-w-[55vw] md:text-5xl"
           >
             Definição
           </TextAnimate>
@@ -64,7 +64,7 @@ export default function Vpns() {
             once
             duration={0.5}
             by="line"
-            className="max-w-[600px] text-gray-400 lg:text-xl"
+            className="text-gray-400 md:max-w-[55vw] lg:text-xl"
           >
             VPN (Virtual Private Network) cria um túnel criptografado que
             conecta seu dispositivo à internet, protegendo sua identidade e
@@ -76,7 +76,7 @@ export default function Vpns() {
             once
             duration={0.5}
             as="h2"
-            className="font-mono text-2xl font-bold md:text-5xl"
+            className="font-mono text-2xl font-bold md:max-w-[55vw] md:text-5xl"
           >
             Como funciona?
           </TextAnimate>
@@ -84,7 +84,7 @@ export default function Vpns() {
             once
             duration={0.5}
             by="line"
-            className="max-w-[600px] text-gray-400 lg:text-xl"
+            className="text-gray-400 md:max-w-[55vw] lg:text-xl"
           >
             Ao usar uma VPN, seus dados são criptografados e enviados através de
             um servidor seguro, escondendo seu endereço IP real.
@@ -95,7 +95,7 @@ export default function Vpns() {
             once
             duration={0.5}
             as="h2"
-            className="font-mono text-2xl font-bold md:text-5xl"
+            className="font-mono text-2xl font-bold md:max-w-[55vw] md:text-5xl"
           >
             Por que é importante?
           </TextAnimate>
@@ -103,7 +103,7 @@ export default function Vpns() {
             once
             duration={0.5}
             by="line"
-            className="max-w-[600px] text-gray-400 lg:text-xl"
+            className="text-gray-400 md:max-w-[55vw] lg:text-xl"
           >
             Ajuda a proteger sua privacidade, evita que hackers espionem sua
             conexão e permite acessar conteúdos restritos geograficamente.
@@ -114,11 +114,11 @@ export default function Vpns() {
             once
             duration={0.5}
             as="h2"
-            className="font-mono text-2xl font-bold md:text-5xl"
+            className="font-mono text-2xl font-bold md:max-w-[55vw] md:text-5xl"
           >
             Dicas práticas de uso
           </TextAnimate>
-          <ul className="ml-4 max-w-[600px] list-disc text-gray-400 lg:text-xl">
+          <ul className="ml-4 list-disc text-gray-400 md:max-w-[55vw] lg:text-xl">
             <TextAnimate once duration={0.5} by="line" as="li">
               Use VPNs confiáveis e pagas para maior segurança.
             </TextAnimate>
@@ -135,11 +135,11 @@ export default function Vpns() {
             once
             duration={0.5}
             as="h2"
-            className="font-mono text-2xl font-bold md:text-5xl"
+            className="font-mono text-2xl font-bold md:max-w-[55vw] md:text-5xl"
           >
             Curiosidades
           </TextAnimate>
-          <p className="max-w-[600px]">
+          <p className="md:max-w-[55vw]">
             <TextAnimate
               once
               duration={0.5}
@@ -158,7 +158,7 @@ export default function Vpns() {
               VPN garante anonimato total na internet.
             </TextAnimate>
           </p>
-          <p className="max-w-[600px]">
+          <p className="md:max-w-[55vw]">
             <TextAnimate
               once
               duration={0.5}

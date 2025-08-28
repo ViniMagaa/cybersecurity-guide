@@ -31,7 +31,7 @@ export default function Home() {
             "Navegue com segurança",
             "Guia sobre cibersegurança",
           ]}
-          className="text-center font-mono text-xl font-bold sm:text-3xl md:text-5xl lg:text-7xl"
+          className="text-center font-mono text-xl font-bold sm:text-3xl md:text-6xl lg:text-7xl"
           typingSpeed={75}
           showCursor
           cursorCharacter="_"
