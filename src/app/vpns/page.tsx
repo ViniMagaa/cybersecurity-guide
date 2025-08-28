@@ -1,7 +1,7 @@
 "use client";
 
 import TextType from "@/blocks/TextAnimations/TextType/TextType";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { Globe } from "@/components/magicui/globe";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { Button } from "@/components/ui/button";
 import { routes } from "@/utils/routes";
@@ -12,16 +12,38 @@ export default function Vpns() {
   const router = useRouter();
 
   return (
-    <>
-      <FlickeringGrid
-        className="absolute inset-0 z-0 size-full"
-        squareSize={4}
-        gridGap={6}
-        color="#78a1bb"
-        maxOpacity={0.25}
-        flickerChance={0.1}
+    <div className="flex w-full flex-grow overflow-hidden">
+      <Globe
+        className="fixed -right-[80vw] opacity-0 md:opacity-100"
+        config={{
+          width: 800,
+          height: 800,
+          onRender: () => {},
+          devicePixelRatio: 2,
+          phi: 0,
+          theta: 0.3,
+          dark: 0,
+          diffuse: 0.4,
+          mapSamples: 16000,
+          mapBrightness: 1.2,
+          baseColor: [1, 1, 1],
+          markerColor: [120 / 255, 161 / 255, 187 / 255],
+          glowColor: [1, 1, 1],
+          markers: [
+            { location: [14.5995, 120.9842], size: 0.03 },
+            { location: [19.076, 72.8777], size: 0.1 },
+            { location: [23.8103, 90.4125], size: 0.05 },
+            { location: [30.0444, 31.2357], size: 0.07 },
+            { location: [39.9042, 116.4074], size: 0.08 },
+            { location: [-23.5505, -46.6333], size: 0.1 },
+            { location: [19.4326, -99.1332], size: 0.1 },
+            { location: [40.7128, -74.006], size: 0.1 },
+            { location: [34.6937, 135.5022], size: 0.05 },
+            { location: [41.0082, 28.9784], size: 0.06 },
+          ],
+        }}
       />
-      <section className="relative flex w-full flex-grow flex-col items-center gap-16 overflow-hidden px-4 pb-8">
+      <section className="m-auto flex w-full max-w-5xl flex-grow flex-col gap-16 overflow-hidden px-4 pb-8">
         <TextType
           text="VPNs"
           className="mt-16 font-mono text-xl font-bold sm:text-3xl md:text-5xl lg:text-7xl"
@@ -34,7 +56,7 @@ export default function Vpns() {
             once
             duration={0.5}
             as="h2"
-            className="text-center font-mono text-2xl font-bold md:text-5xl"
+            className="font-mono text-2xl font-bold md:text-5xl"
           >
             Definição
           </TextAnimate>
@@ -42,7 +64,7 @@ export default function Vpns() {
             once
             duration={0.5}
             by="line"
-            className="max-w-[600px] text-center text-gray-400 lg:text-xl"
+            className="max-w-[600px] text-gray-400 lg:text-xl"
           >
             VPN (Virtual Private Network) cria um túnel criptografado que
             conecta seu dispositivo à internet, protegendo sua identidade e
@@ -54,7 +76,7 @@ export default function Vpns() {
             once
             duration={0.5}
             as="h2"
-            className="text-center font-mono text-2xl font-bold md:text-5xl"
+            className="font-mono text-2xl font-bold md:text-5xl"
           >
             Como funciona?
           </TextAnimate>
@@ -62,7 +84,7 @@ export default function Vpns() {
             once
             duration={0.5}
             by="line"
-            className="max-w-[600px] text-center text-gray-400 lg:text-xl"
+            className="max-w-[600px] text-gray-400 lg:text-xl"
           >
             Ao usar uma VPN, seus dados são criptografados e enviados através de
             um servidor seguro, escondendo seu endereço IP real.
@@ -73,7 +95,7 @@ export default function Vpns() {
             once
             duration={0.5}
             as="h2"
-            className="text-center font-mono text-2xl font-bold md:text-5xl"
+            className="font-mono text-2xl font-bold md:text-5xl"
           >
             Por que é importante?
           </TextAnimate>
@@ -81,7 +103,7 @@ export default function Vpns() {
             once
             duration={0.5}
             by="line"
-            className="max-w-[600px] text-center text-gray-400 lg:text-xl"
+            className="max-w-[600px] text-gray-400 lg:text-xl"
           >
             Ajuda a proteger sua privacidade, evita que hackers espionem sua
             conexão e permite acessar conteúdos restritos geograficamente.
@@ -92,7 +114,7 @@ export default function Vpns() {
             once
             duration={0.5}
             as="h2"
-            className="text-center font-mono text-2xl font-bold md:text-5xl"
+            className="font-mono text-2xl font-bold md:text-5xl"
           >
             Dicas práticas de uso
           </TextAnimate>
@@ -113,7 +135,7 @@ export default function Vpns() {
             once
             duration={0.5}
             as="h2"
-            className="text-center font-mono text-2xl font-bold md:text-5xl"
+            className="font-mono text-2xl font-bold md:text-5xl"
           >
             Curiosidades
           </TextAnimate>
@@ -163,6 +185,6 @@ export default function Vpns() {
           Próximo assunto <ArrowRight className="size-4" />
         </Button>
       </section>
-    </>
+    </div>
   );
 }
