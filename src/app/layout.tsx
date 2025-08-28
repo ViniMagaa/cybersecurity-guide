@@ -1,3 +1,4 @@
+import { Background } from "@/components/background";
 import { Footer } from "@/components/footer";
 import { Menu } from "@/components/menu";
 import type { Metadata } from "next";
@@ -30,11 +31,11 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${jetBrainsMono.variable} antialiased`}
       >
-        <main className="from-navy relative flex min-h-screen flex-col bg-linear-to-br from-15% to-[#131620] to-75%">
+        <Background>
           <Menu />
           {children}
           <Footer />
-        </main>
+        </Background>
       </body>
     </html>
   );
