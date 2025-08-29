@@ -371,6 +371,7 @@ const PrismaticBurst = ({
       const sm = mouseSmoothRef.current;
       sm[0] += (tgt[0] - sm[0]) * alpha;
       sm[1] += (tgt[1] - sm[1]) * alpha;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       program.uniforms.uMouse.value = sm as any;
       program.uniforms.uTime.value = accumTime;
       renderer.render({ scene: meshRef.current! });
@@ -403,6 +404,7 @@ const PrismaticBurst = ({
       rendererRef.current = null;
       gradTexRef.current = null;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
