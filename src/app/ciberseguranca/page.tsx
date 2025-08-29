@@ -1,0 +1,175 @@
+"use client";
+
+import PrismaticBurst from "@/blocks/Backgrounds/PrismaticBurst/PrismaticBurst";
+import TextType from "@/blocks/TextAnimations/TextType/TextType";
+import { TextAnimate } from "@/components/magicui/text-animate";
+import { Button } from "@/components/ui/button";
+import { routes } from "@/utils/routes";
+import { ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
+
+export default function Ciberseguranca() {
+  const router = useRouter();
+
+  return (
+    <>
+      <div className="fixed top-0 left-0 h-screen w-full opacity-50">
+        <PrismaticBurst
+          animationType="rotate3d"
+          intensity={2}
+          speed={0.5}
+          distort={1.0}
+          paused={false}
+          offset={{ x: 0, y: 0 }}
+          hoverDampness={0.25}
+          rayCount={24}
+          mixBlendMode="lighten"
+          colors={["#659b5e", "#593c8f", "#ebf5ee", "#78a1bb"]}
+        />
+      </div>
+      <section className="relative flex w-full flex-grow flex-col items-center gap-16 overflow-hidden px-4 pb-8">
+        <TextType
+          text="Cibersegurança"
+          className="mt-16 font-mono text-3xl font-bold sm:text-4xl md:text-6xl lg:text-7xl"
+          typingSpeed={75}
+          showCursor
+          cursorCharacter="_"
+        />
+        <div className="space-y-4">
+          <TextAnimate
+            once
+            duration={0.5}
+            as="h2"
+            className="text-center font-mono text-2xl font-bold md:text-5xl"
+          >
+            Definição
+          </TextAnimate>
+          <TextAnimate
+            once
+            duration={0.5}
+            by="line"
+            className="max-w-[600px] text-center text-gray-400 lg:text-xl"
+          >
+            Cibersegurança é o conjunto de práticas e ferramentas que protegem
+            computadores, celulares e dados pessoais contra ataques digitais.
+          </TextAnimate>
+        </div>
+        <div className="space-y-4">
+          <TextAnimate
+            once
+            duration={0.5}
+            as="h2"
+            className="text-center font-mono text-2xl font-bold md:text-5xl"
+          >
+            Como funciona?
+          </TextAnimate>
+          <TextAnimate
+            once
+            duration={0.5}
+            by="line"
+            className="max-w-[600px] text-center text-gray-400 lg:text-xl"
+          >
+            Inclui medidas como uso de antivírus, senhas fortes, autenticação em
+            duas etapas, backups e navegação consciente para evitar golpes e
+            invasões.
+          </TextAnimate>
+        </div>
+        <div className="space-y-4">
+          <TextAnimate
+            once
+            duration={0.5}
+            as="h2"
+            className="text-center font-mono text-2xl font-bold md:text-5xl"
+          >
+            Por que é importante?
+          </TextAnimate>
+          <TextAnimate
+            once
+            duration={0.5}
+            by="line"
+            className="max-w-[600px] text-center text-gray-400 lg:text-xl"
+          >
+            Mesmo pessoas comuns são alvos: hackers buscam senhas de redes
+            sociais, dados bancários e informações pessoais para aplicar golpes.
+          </TextAnimate>
+        </div>
+        <div className="space-y-4">
+          <TextAnimate
+            once
+            duration={0.5}
+            as="h2"
+            className="text-center font-mono text-2xl font-bold md:text-5xl"
+          >
+            Dicas práticas de uso
+          </TextAnimate>
+          <ul className="ml-4 max-w-[600px] list-disc text-gray-400 lg:text-xl">
+            <TextAnimate once duration={0.5} by="line" as="li">
+              Use senhas diferentes para cada conta.
+            </TextAnimate>
+            <TextAnimate once duration={0.5} by="line" as="li">
+              Ative autenticação em duas etapas (2FA).
+            </TextAnimate>
+            <TextAnimate once duration={0.5} by="line" as="li">
+              Mantenha sistemas e aplicativos sempre atualizados.
+            </TextAnimate>
+          </ul>
+        </div>
+        <div className="space-y-4">
+          <TextAnimate
+            once
+            duration={0.5}
+            as="h2"
+            className="text-center font-mono text-2xl font-bold md:text-5xl"
+          >
+            Curiosidades
+          </TextAnimate>
+          <p className="max-w-[600px]">
+            <TextAnimate
+              once
+              duration={0.5}
+              as="strong"
+              className="font-mono text-lg font-semibold lg:text-2xl"
+            >
+              Mito:
+            </TextAnimate>
+            <TextAnimate
+              once
+              duration={0.5}
+              as="span"
+              by="line"
+              className="ml-2 text-gray-400 lg:text-xl"
+            >
+              Eu não tenho nada que interesse a hackers.
+            </TextAnimate>
+          </p>
+          <p className="max-w-[600px]">
+            <TextAnimate
+              once
+              duration={0.5}
+              as="strong"
+              className="font-mono text-lg font-semibold lg:text-2xl"
+            >
+              Verdade:
+            </TextAnimate>
+            <TextAnimate
+              once
+              duration={0.5}
+              by="line"
+              as="span"
+              className="text-gray-400 lg:text-xl"
+            >
+              Qualquer dado pessoal pode ser usado para golpes, desde fotos até
+              informações de login.
+            </TextAnimate>
+          </p>
+        </div>
+        <Button
+          onClick={() => router.push(routes[0].href)}
+          className="w-fit rounded-full bg-white font-mono text-sm text-black hover:gap-4 hover:bg-white"
+        >
+          <ArrowLeft className="size-4" /> Voltar ao início
+        </Button>
+      </section>
+    </>
+  );
+}
